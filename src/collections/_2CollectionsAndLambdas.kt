@@ -27,3 +27,8 @@ fun a12(people: List<Person>) {
     println(people.filter { it.age >= 21 }.map { it.name })
     println(people.filter { it.age >= 21 }.map(Person::name))
 }
+
+fun main(args: Array<String>) {
+    val people = listOf(Person("Alice", 29), Person("Bob", 31))
+    println(people.filter { it.age >= 21 }.map(Person::name))
+}

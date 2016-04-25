@@ -1,20 +1,14 @@
 package collections.e2
 
-import java.util.*
 import kotlin.comparisons.compareBy
 import kotlin.comparisons.thenBy
 
-data class Person(val name: String, val age: Int): Comparable<Person> {
-    override fun compareTo(other: Person): Int {
-        val compareAges = age.compareTo(other.age)
-        return if (compareAges != 0) compareAges else name.compareTo(other.name)
-    }
-}
+data class Person(val name: String, val age: Int)
 
 fun q1(people: List<Person>) {
-    //terrible!!!
-    Collections.sort(people)
+//    Collections.sort(people)
 
-    people.sortedBy(Person::age)
-    people.sortedWith(compareBy(Person::age).thenBy(Person::name))
+    people.sortedWith(
+            compareBy { p: Person -> p.name }
+            .thenBy { p: Person -> p.age })
 }

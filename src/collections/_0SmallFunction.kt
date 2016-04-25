@@ -5,3 +5,8 @@ fun isDigit(c: Char): Boolean {
 }
 
 fun Char.isDigit1() = this in '0'..'9'
+
+fun main(args: Array<String>) {
+    println(isDigit('x'))
+    println(isDigit('3'))
+}

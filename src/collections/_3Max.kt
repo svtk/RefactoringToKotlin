@@ -15,6 +15,5 @@ fun q(people: List<Person>) {
 }
 
 fun a(people: List<Person>) {
-    people.map(Person::age).max()
-    people.maxBy(Person::age)
+    val oldest = people.maxBy { it.age }
 }
