@@ -1,4 +1,4 @@
-package nullability
+package safety
 
 class Client (val personalInfo: PersonalInfo?)
 class PersonalInfo (val email: String?)

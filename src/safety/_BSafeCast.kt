@@ -1,4 +1,4 @@
-package nullability
+package safety
 
 
 interface Animal
